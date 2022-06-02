@@ -96,6 +96,7 @@ if (autoRotate) {
         sY = e.clientY;
     //puedo moverlo al tocar con esta 
     this.onpointermove = function (e) {
+      e.preventDefault();
       if(screen.width < 480){
         carrucelReturn();
       } 
