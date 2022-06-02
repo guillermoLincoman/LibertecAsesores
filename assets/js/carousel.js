@@ -93,16 +93,8 @@ if (autoRotate) {
     clearInterval(odrag.timer);
     e = e || window.event;
     var sX = e.clientX,
-        sY = e.clientY;
-    //puedo moverlo al tocar con esta 
-    this.onpointermove = function (e) {
-      e.preventDefault();
-      if(screen.width < 480 && flag3){
-        carrucelReturn();
-      } 
-    };
-    
-       /* Esta funcion genera muchos bugs al usar la app
+        sY = e.clientY;    
+    /* Esta funcion genera muchos bugs al usar la app
     this.onpointermove = function (e) {
       e = e || window.event;
       var nX = e.clientX,
