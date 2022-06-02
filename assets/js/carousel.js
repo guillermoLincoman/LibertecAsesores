@@ -97,7 +97,7 @@ if (autoRotate) {
     //puedo moverlo al tocar con esta 
     this.onpointermove = function (e) {
       e.preventDefault();
-      if(screen.width < 480){
+      if(screen.width < 480 && flag3){
         carrucelReturn();
       } 
     };
