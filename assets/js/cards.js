@@ -189,7 +189,7 @@ function mostrarCardAnimada(e){
                     drag.style.transform = `rotateX(10deg) rotateY(-${i * (360 / aImg.length)}deg)`;
 
                     //7. Centro la imagen seleccionada, acerco en el eje Z  y acomodo
-                    if(screen.width < 380)
+                    if(screen.width < 400)
                     {
                         iniciarCarrucel(480,147,74,-55,66,i);
                     }else{

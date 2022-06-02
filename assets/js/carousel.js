@@ -53,12 +53,16 @@ function init(delayTime) {
           }
           flagCards = 0;
     }
-    setTimeout(()=>{
-      for (var i = 0; i < aEle.length; i++) {
-          aEle[i].style.transform = "rotateY(" + (i * (360 / aEle.length)) + "deg) translateZ(420px)";
-      }
-    },time)
-    time = 10;
+    if(screen.width > 420)
+    {
+      setTimeout(()=>{
+        for (var i = 0; i < aEle.length; i++) {
+            aEle[i].style.transform = "rotateY(" + (i * (360 / aEle.length)) + "deg) translateZ(420px)";
+        }
+      },time)
+      time = 10;
+    }
+
 }
 
 function applyTranform(obj) {
@@ -93,8 +97,9 @@ if (autoRotate) {
     clearInterval(odrag.timer);
     e = e || window.event;
     var sX = e.clientX,
-        sY = e.clientY;    
-    /* Esta funcion genera muchos bugs al usar la app
+        sY = e.clientY;
+    //puedo moverlo al tocar con esta 
+       /* Esta funcion genera muchos bugs al usar la app
     this.onpointermove = function (e) {
       e = e || window.event;
       var nX = e.clientX,
